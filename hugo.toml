@@ -24,7 +24,7 @@ pagination.pagerSize = 5
   fullWidthTheme = false
 
   # center theme with default width
-  centerTheme = false
+  centerTheme = true
 
   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
   # then the file will be used as a cover automatically.
@@ -68,19 +68,19 @@ pagination.pagerSize = 5
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
-  creator = ""
-  site = ""
+  creator = "razobeckett"
+  site = "https://x.com/razobeckett"
 
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "RazoBeckett"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
-      owner = ""
-      keywords = ""
-      copyright = ""
+      subtitle = "Razo's Blog"
+      owner = "Razo Beckett"
+      keywords = "razobeckett, razo beckett, mayurraut, mayur raut, razo's blog"
+      copyright = "2025 RazoBeckett"
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other posts"
@@ -92,7 +92,7 @@ pagination.pagerSize = 5
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Terminal"
+        logoText = "Razo Beckett"
         logoHomeLink = "/"
 
       [languages.en.menu]
