@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on RazoBeckett</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on RazoBeckett</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Failed Switch to NixOS, or Why I Still Live in Chaos on Arch</title>
+      <link>/posts/failed-switch-to-nixos/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/failed-switch-to-nixos/</guid>
+      <description>&lt;h2 id=&#34;a-538-day-love-affair-with-the-bleeding-edge&#34;&gt;A 538-Day Love Affair with the Bleeding Edge&lt;/h2&gt;&#xA;&lt;p&gt;I once told someone, &amp;ldquo;Nix is for stability. I live in organized chaos.&amp;rdquo; I didn&amp;rsquo;t realize how true that was until I tried to leave.&lt;/p&gt;&#xA;&lt;p&gt;I gave NixOS a real shot. The promises of perfect reproducibility, declarative configurations, and atomic upgrades whispered sweet nothings in my ear. On paper, it&amp;rsquo;s the endgame—a system as a pristine, version-controlled artifact. A &lt;strong&gt;monument&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;But my computer isn&amp;rsquo;t a monument. It’s a &lt;strong&gt;lab&lt;/strong&gt;. And in my lab, things explode.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
