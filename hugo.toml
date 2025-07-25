@@ -71,6 +71,20 @@ pagination.pagerSize = 5
   creator = "razobeckett"
   site = "https://x.com/razobeckett"
 
+[params.giscus]
+  repo = "razobeckett/blog"
+  repoID = "R_kgDOPSPXbA"
+  category = "General"
+  categoryID = "DIC_kwDOPSPXbM4CtajT"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "transparent_dark"
+  lang = "en"
+  crossorigin = "anonymous"
+
 [languages]
   [languages.en]
     languageName = "English"
