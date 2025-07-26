@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/posts/failed-switch-to-nixos/</loc>
+    <loc>https://blog.razobeckett.xyz/posts/failed-switch-to-nixos/</loc>
     <lastmod>2025-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://blog.razobeckett.xyz/posts/</loc>
     <lastmod>2025-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://blog.razobeckett.xyz/</loc>
     <lastmod>2025-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://blog.razobeckett.xyz/about/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://blog.razobeckett.xyz/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://blog.razobeckett.xyz/tags/</loc>
   </url>
 </urlset>
