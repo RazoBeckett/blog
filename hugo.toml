@@ -88,7 +88,7 @@ pagination.pagerSize = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "RazoBeckett"
+    title = "Razo Beckett's Blog"
 
     [languages.en.params]
       subtitle = "Razo's Blog"
