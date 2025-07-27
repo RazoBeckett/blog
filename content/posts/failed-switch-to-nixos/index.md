@@ -1,6 +1,9 @@
 ---
-title: My Failed Switch to NixOS, or Why I Still Live in Chaos on Arch
+title: "A 538‑Day Love Affair with the Bleeding Edge"
 date: 2025-06-24
+description: "My Failed Switch to NixOS, or Why I Still Live in Chaos on Arch."
+tags: ["nixos", "archlinux", "linux", "os"]
+categories: ["linux", "os-experience"]
 draft: false
 ---
 
