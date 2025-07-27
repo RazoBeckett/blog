@@ -4,6 +4,7 @@ date: 2025-07-27
 description: "Why I use Git, how it saved me once, and why every dev should care."
 tags: ["git", "version control", "dotfiles", "developer workflow", "beginner friendly"]
 categories: ["development", "tools"]
+cover: "cover.webp"
 draft: false
 ---
 
