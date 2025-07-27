@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>How to git it! :: Razo Beckett&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Why I use Git, how it saved me once, and why every dev should care." />
+<meta name="keywords" content="razobeckett, razo beckett, mayurraut, mayur raut, razo&#39;s blog" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.razobeckett.xyz/posts/how-to-git-it/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+<link rel="stylesheet" href="https://blog.razobeckett.xyz/terminal.css">
+
+
+
+
+<link rel="shortcut icon" href="https://blog.razobeckett.xyz/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.razobeckett.xyz/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="https://x.com/razobeckett" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to git it!">
+<meta property="og:description" content="Why I use Git, how it saved me once, and why every dev should care." />
+<meta property="og:url" content="https://blog.razobeckett.xyz/posts/how-to-git-it/" />
+<meta property="og:site_name" content="Razo Beckett&#39;s Blog" />
+
+  <meta property="og:image" content="https://blog.razobeckett.xyz/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="development" />
+
+  <meta property="article:section" content="tools" />
+
+
+  <meta property="article:published_time" content="2025-07-27 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Razo Beckett
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://mayurraut.dev">Portfolio</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="https://mayurraut.dev" >Portfolio</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.razobeckett.xyz/posts/how-to-git-it/">How to git it!</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-07-27</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.razobeckett.xyz/tags/git/">git</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/version-control/">version control</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/dotfiles/">dotfiles</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/developer-workflow/">developer workflow</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/beginner-friendly/">beginner friendly</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/posts/how-to-git-it/cover.png"
+    class="post-cover"
+    alt="How to git it!"
+    title="Cover Image" />
+
+
+  
+
+  <div class="post-content"><div>
+        <p><em>Why I use Git, how it saved me once, and why you should care even if you&rsquo;re a solo dev.</em></p>
+<h2 id="that-one-time-git-saved-my-ass">That one time Git saved my ass<a href="#that-one-time-git-saved-my-ass" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>Back in my diploma days, I was working on a Python microproject. Everything was going well. I’d written a bunch of code, tested it, cleaned it up — almost done.</p>
+<p>And then I did something dumb. I deleted the whole project folder by mistake while clearing up some stuff.</p>
+<p>Gone. The entire thing.</p>
+<p>But turns out&hellip; I had pushed it to GitHub just a day before. So I opened a terminal, cloned it back,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone git@github.com:RazoBeckett/Password-Manager.git
+</span></span></code></pre></div><p>and everything was back in place.</p>
+<p>That day, I realized Git isn’t just some fancy tool people use on big teams. It’s a personal backup, version history, time machine, and panic button — all in one. If I hadn’t tracked the code with Git and pushed it to GitHub, I’d have lost the entire thing.</p>
+<h2 id="git--but-why">Git — but why?<a href="#git--but-why" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>If you’re just using <code>git add</code>, <code>commit</code>, <code>push</code>, and <code>pull</code>, that’s honestly enough most of the time.</p>
+<p>But here’s why Git becomes a real game-changer once you get into the habit:</p>
+<ul>
+<li>You can try out weird, risky stuff in a separate branch without touching your main code.</li>
+<li>You can go back to previous states of your files like nothing happened.</li>
+<li>You don’t need to zip your folder every time before making changes.</li>
+<li>It gives you freedom to experiment without fear.</li>
+</ul>
+<p>Even if you&rsquo;re working solo, Git gives you peace of mind. You stop worrying about breaking stuff because you know you can always roll back.</p>
+<h2 id="i-didnt-learn-git-from-a-course">I didn’t learn Git from a course<a href="#i-didnt-learn-git-from-a-course" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>When I first started, I wasn’t doing much with Git. It was just <code>git init</code>, commit, push. That’s it.</p>
+<p>Things changed when I switched to Linux.</p>
+<p>On Linux, everything is a config file. I kept tweaking stuff — my terminal, window manager, keybinds, scripts, themes. I needed a way to manage all those files safely and try new setups without losing what worked.</p>
+<p>That’s when Git started making sense. I started tracking my <a href="https://github.com/razobeckett/dotfiles">dotfiles</a>, trying different configs, and rolling back easily when something broke.</p>
+<p>Later on, I got into open source. I was following <a href="https://www.youtube.com/@ChrisTitusTech">Chris Titus Tech</a> and ended up contributing to some of his projects like:</p>
+<p><a href="https://github.com/ChrisTitusTech/dwm-titus/pulls?q=sort%3Aupdated-desc&#43;is%3Apr&#43;author%3Arazobeckett">dwm-titus</a> | <a href="https://github.com/ChrisTitusTech/mybash/pulls?q=sort%3Aupdated-desc&#43;is%3Apr&#43;author%3Arazobeckett">bash-config</a> | <a href="https://github.com/ChrisTitusTech/linutil/issues?q=sort%3Aupdated-desc%20is%3Apr%20author%3Arazobeckett">linutil</a></p>
+<p>That’s where I got more comfortable with branches, commits, rebases, PRs, and all that.</p>
+<p>But it all started from managing dotfiles and breaking things on my own system.</p>
+<h2 id="what-tools-do-i-use">What tools do I use?<a href="#what-tools-do-i-use" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>I&rsquo;m a terminal-first kind of person. I like to keep things simple and fast.</p>
+<ul>
+<li><strong>Git CLI</strong> – Just the basic <code>git</code> command. It does everything I need.</li>
+<li><strong><a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a></strong> – A plugin for Vim/Neovim. Helps me stage specific hunks, view diffs, write commits — all inside the editor. No switching windows.</li>
+<li><strong><a href="https://github.com/jesseduffield/lazygit">LazyGit</a></strong> – A TUI app that gives a clean overview of branches, changes, logs. I mostly use it when I want a quick look at the repo status.</li>
+</ul>
+<p>I’ve tried stuff like GitKraken and VS Code’s Git UI. They’re fine, but I just found them too clicky. Terminal is faster once you get the hang of it.</p>
+<h2 id="git--github">Git ≠ GitHub<a href="#git--github" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>This still confuses a lot of people early on, so let’s clear it up.</p>
+<ul>
+<li><strong>Git</strong> is a version control tool. It runs locally. You don’t need internet to use Git.</li>
+<li><strong>GitHub</strong> is a platform to host your Git repositories and collaborate with others.</li>
+</ul>
+<p>You can use Git without ever touching GitHub. But if you want to back things up or share your code, GitHub makes it easy. There are also alternatives like GitLab, Codeberg, and Gitea if you&rsquo;re into self-hosting or privacy.</p>
+<h2 id="where-to-start-if-youre-new">Where to start if you’re new<a href="#where-to-start-if-youre-new" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>Don’t overthink it. You don’t need to “master” Git before you start using it.</p>
+<ul>
+<li>Create a new project and run <code>git init</code>.</li>
+<li>Track your code.</li>
+<li>Commit small changes regularly.</li>
+<li>Push it to GitHub, even if it’s private.</li>
+<li>Use it for your notes, config files, scripts — anything you change often.</li>
+</ul>
+<p>Check out the <a href="https://education.github.com/git-cheat-sheet-education.pdf">GitHub Git cheat sheet</a> if you want a quick reference.</p>
+<h2 id="final-thoughts">Final thoughts<a href="#final-thoughts" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>You don’t need to know everything about Git to use it.
+You just need to know enough to not lose your work — and enough to try something crazy without worrying about messing things up.</p>
+<p>Start using Git today. For your projects. For your configs. For peace of mind.</p>
+<p>And remember:
+<strong>Always push your code.</strong> You never know when you’ll thank yourself later.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="https://blog.razobeckett.xyz/posts/failed-switch-to-nixos/" class="button inline next">
+         [<span class="button__text">A 538‑Day Love Affair with the Bleeding Edge</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <div id="comments" style="margin-top: 2rem;">
+  <script src="https://giscus.app/client.js"
+          data-repo="razobeckett/blog"
+          data-repo-id="R_kgDOPSPXbA"
+          data-category="General"
+          data-category-id="DIC_kwDOPSPXbM4CtajT"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="transparent_dark"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Razo Beckett&#39;s Blog</title>
-    <link>https://blog.razobeckett.xyz/posts/</link>
-    <description>Recent content in Posts on Razo Beckett&#39;s Blog</description>
+    <title>Archlinux on Razo Beckett&#39;s Blog</title>
+    <link>https://blog.razobeckett.xyz/tags/archlinux/</link>
+    <description>Recent content in Archlinux on Razo Beckett&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.razobeckett.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to git it!</title>
-      <link>https://blog.razobeckett.xyz/posts/how-to-git-it/</link>
-      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.razobeckett.xyz/posts/how-to-git-it/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Why I use Git, how it saved me once, and why you should care even if you&amp;rsquo;re a solo dev.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;that-one-time-git-saved-my-ass&#34;&gt;That one time Git saved my ass&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Back in my diploma days, I was working on a Python microproject. Everything was going well. I’d written a bunch of code, tested it, cleaned it up — almost done.&lt;/p&gt;&#xA;&lt;p&gt;And then I did something dumb. I deleted the whole project folder by mistake while clearing up some stuff.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.razobeckett.xyz/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A 538‑Day Love Affair with the Bleeding Edge</title>
       <link>https://blog.razobeckett.xyz/posts/failed-switch-to-nixos/</link>

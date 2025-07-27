@@ -6,10 +6,17 @@
     <description>Recent content on Razo Beckett&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.razobeckett.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Failed Switch to NixOS, or Why I Still Live in Chaos on Arch</title>
+      <title>How to git it!</title>
+      <link>https://blog.razobeckett.xyz/posts/how-to-git-it/</link>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.razobeckett.xyz/posts/how-to-git-it/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Why I use Git, how it saved me once, and why you should care even if you&amp;rsquo;re a solo dev.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;that-one-time-git-saved-my-ass&#34;&gt;That one time Git saved my ass&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Back in my diploma days, I was working on a Python microproject. Everything was going well. I’d written a bunch of code, tested it, cleaned it up — almost done.&lt;/p&gt;&#xA;&lt;p&gt;And then I did something dumb. I deleted the whole project folder by mistake while clearing up some stuff.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A 538‑Day Love Affair with the Bleeding Edge</title>
       <link>https://blog.razobeckett.xyz/posts/failed-switch-to-nixos/</link>
       <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.razobeckett.xyz/posts/failed-switch-to-nixos/</guid>
