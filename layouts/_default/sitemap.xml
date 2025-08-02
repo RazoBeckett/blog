@@ -1,0 +1,21 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  {{- range .Site.Pages }}
+    {{- $lastmod := .Lastmod }}
+    {{- if $lastmod.IsZero }}
+      {{- $lastmod = .Date }}
+    {{- end }}
+    {{- $priority := printf "%.2f" (float (.Params.priority | default "0.80")) }}
+    {{- if .IsHome }}
+      {{- $priority = "1.00" }}
+    {{- end }}
+    <url>
+      <loc>{{ .Permalink | safeURL }}</loc>
+      <lastmod>{{ $lastmod.Format "2006-01-02T15:04:05Z" }}</lastmod>
+      <priority>{{ $priority }}</priority>
+    </url>
+  {{- end }}
+</urlset>
