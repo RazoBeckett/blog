@@ -16,15 +16,15 @@ I'm Mayur Raut — also known online as Razo Beckett.
 This blog is where I get real. Expect honest takes, behind-the-scenes breakdowns of projects I build, and maybe even the occasional rant about tech that’s trying too hard.
 
 You can explore more about me and my projects at:  
-🌐 [https://mayurraut.dev](https://mayurraut.dev)
+🌐 [https://mayurraut.dev](https://link.razobeckett.xyz/pfo?utm_source=blog)
 
 ## 🤝 Let's Connect
 This blog isn’t just a broadcast—it’s a conversation.  
 Feel free to reach out, share thoughts, suggest ideas, or just say hi.
 
-🐙 [GitHub](https://github.com/RazoBeckett)
-💼 [LinkedIn](https://linkedin.com/in/mayurraut0) 
-🐦 [Twitter](https://x.com/RazoBeckett) 
+🐙 [GitHub](https://link.razobeckett.xyz/gh?utm_source=blog)
+💼 [LinkedIn](https://link.razobeckett.xyz/lnkd?utm_source=blog)
+🐦 [Twitter](https://link.razobeckett.xyz/x?utm_source=blog)
 
 Thanks for stopping by. I'm glad you're here.
 
