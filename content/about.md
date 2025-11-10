@@ -1,7 +1,7 @@
 # 👋 Hey, I’m Razo Beckett
 
 Welcome to my little corner of the web!  
-I'm a curious technologist, passionate about Linux, open-source, automation, DevOps, and building tools that just *work*. Whether it's scripting my way through a problem or crafting something useful with Go or Python, I love creating things that make life a little easier—and a lot more interesting.
+I am an interested technologist that loves Linux, open-source, automation, DevOps, and the development of tools that simply work. Whether it's scripting my way through a problem or crafting something useful with Go or Python, I love creating things that make life a little easier—and a lot more interesting.
 
 ## 💻 What I Do
 I spend most of my time tinkering with:
@@ -12,7 +12,7 @@ I spend most of my time tinkering with:
 - 💬 Sharing my learnings, rants, and discoveries right here on this blog
 
 ## 👤 Who I Am
-I'm Mayur Raut — also known online as Razo Beckett.  
+My true name is Mayur Raut, better known as Razo Beckett online.
 This blog is where I get real. Expect honest takes, behind-the-scenes breakdowns of projects I build, and maybe even the occasional rant about tech that’s trying too hard.
 
 You can explore more about me and my projects at:  
