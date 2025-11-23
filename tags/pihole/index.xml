@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pihole on Razo Beckett&#39;s Blog</title>
+    <link>https://blog.razobeckett.xyz/tags/pihole/</link>
+    <description>Recent content in Pihole on Razo Beckett&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.razobeckett.xyz/tags/pihole/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Homelab, My Rules</title>
+      <link>https://blog.razobeckett.xyz/posts/my-homelab-my-rules/</link>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.razobeckett.xyz/posts/my-homelab-my-rules/</guid>
+      <description>&lt;h1 id=&#34;my-homelab-my-rules&#34;&gt;My Homelab, My Rules&lt;/h1&gt;&#xA;&lt;h3 id=&#34;and-why-it-became-the-one-place-where-everything-finally-feels-mine&#34;&gt;…and why it became the one place where everything finally feels &lt;em&gt;mine&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;There&amp;rsquo;s something romantic about a homelab.&lt;br&gt;&#xA;Not in the candle-light-dinner way — more like &lt;em&gt;&amp;ldquo;this is my little universe, running on wires and willpower.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Mine wasn&amp;rsquo;t built from money, or ambition, or some enterprise-grade rack server humming in a basement.&lt;/p&gt;&#xA;&lt;p&gt;It started with &lt;strong&gt;one freelance job&lt;/strong&gt; and a second-hand &lt;strong&gt;HP EliteDesk 800 G1 SFF&lt;/strong&gt; — an aging i5 4th Gen, &lt;strong&gt;8 GB of DDR3&lt;/strong&gt;, a &lt;strong&gt;128 GB SSD&lt;/strong&gt;, and a &lt;strong&gt;500 GB HDD&lt;/strong&gt; that had probably lived several lives before ending up with me.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

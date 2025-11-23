@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>My Homelab, My Rules :: Razo Beckett&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How I built a private, self-hosted universe from a single freelance paycheck — and why it changed everything." />
+<meta name="keywords" content="razobeckett, razo beckett, mayurraut, mayur raut, razo&#39;s blog" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.razobeckett.xyz/posts/my-homelab-my-rules/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://blog.razobeckett.xyz/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+<link rel="stylesheet" href="https://blog.razobeckett.xyz/terminal.css">
+
+
+
+
+<link rel="shortcut icon" href="https://blog.razobeckett.xyz/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.razobeckett.xyz/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="https://x.com/razobeckett" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="My Homelab, My Rules">
+<meta property="og:description" content="How I built a private, self-hosted universe from a single freelance paycheck — and why it changed everything." />
+<meta property="og:url" content="https://blog.razobeckett.xyz/posts/my-homelab-my-rules/" />
+<meta property="og:site_name" content="Razo Beckett&#39;s Blog" />
+
+  
+  
+    
+  
+  <meta property="og:image" content="https://blog.razobeckett.xyz/posts/my-homelab-my-rules/cover.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="infrastructure" />
+
+  <meta property="article:section" content="self-hosting" />
+
+  <meta property="article:section" content="linux" />
+
+
+  <meta property="article:published_time" content="2025-11-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<meta
+  name="google-site-verification"
+  content="CLIJR-GeZuUH9m8PPlxtGoxQeRtO24pxvEpm9oxnJ9k"
+/>
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Razo Beckett
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://link.razobeckett.xyz/pfo?utm_source=blog">Portfolio</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="https://link.razobeckett.xyz/pfo?utm_source=blog" >Portfolio</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.razobeckett.xyz/posts/my-homelab-my-rules/">My Homelab, My Rules</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-11-23</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.razobeckett.xyz/tags/homelab/">homelab</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/self-hosted/">self-hosted</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/proxmox/">proxmox</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/privacy/">privacy</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/devops/">devops</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/networking/">networking</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/netbird/">netbird</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/pihole/">pihole</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/traefik/">traefik</a>&nbsp;
+      
+      #<a href="https://blog.razobeckett.xyz/tags/cloudflare/">cloudflare</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/posts/my-homelab-my-rules/cover.png"
+    class="post-cover"
+    alt="My Homelab, My Rules"
+    title="Cover Image" />
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="my-homelab-my-rules">My Homelab, My Rules<a href="#my-homelab-my-rules" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<h3 id="and-why-it-became-the-one-place-where-everything-finally-feels-mine">…and why it became the one place where everything finally feels <em>mine</em><a href="#and-why-it-became-the-one-place-where-everything-finally-feels-mine" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<hr>
+<p>There&rsquo;s something romantic about a homelab.<br>
+Not in the candle-light-dinner way — more like <em>&ldquo;this is my little universe, running on wires and willpower.&rdquo;</em></p>
+<p>Mine wasn&rsquo;t built from money, or ambition, or some enterprise-grade rack server humming in a basement.</p>
+<p>It started with <strong>one freelance job</strong> and a second-hand <strong>HP EliteDesk 800 G1 SFF</strong> — an aging i5 4th Gen, <strong>8 GB of DDR3</strong>, a <strong>128 GB SSD</strong>, and a <strong>500 GB HDD</strong> that had probably lived several lives before ending up with me.</p>
+<p>Nothing fancy. Nothing expensive.<br>
+Just enough.<br>
+And enough is powerful when you actually know what you want.</p>
+<h3 id="some-pictures-of-server-seating-in-the-corner">Some pictures of server seating in the corner<a href="#some-pictures-of-server-seating-in-the-corner" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><img src="/posts/my-homelab-my-rules/assets/physical-server-1.jpeg" alt="Physical Image 1">
+<img src="/posts/my-homelab-my-rules/assets/physical-server-2.jpeg" alt="Physical Image 2"></p>
+<h2 id="why-i-even-wanted-a-homelab"><strong>Why I Even Wanted a Homelab</strong><a href="#why-i-even-wanted-a-homelab" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>I&rsquo;m the kind of person who gets uncomfortable giving strangers my data — <em>especially</em> trillion-dollar strangers.<br>
+Google Photos deciding the fate of my memories?<br>
+A SaaS password manager holding my entire digital existence?<br>
+Online tools storing my documents because I needed to compress a PDF?</p>
+<p>No. Absolutely not.</p>
+<p>I wanted a place that was:</p>
+<ul>
+<li><strong>Private</strong></li>
+<li><strong>Cheap</strong></li>
+<li><strong>Mine</strong></li>
+<li>And <strong>fun to break</strong> without consequences.</li>
+</ul>
+<p>Cloud services try to protect you from yourself.<br>
+A homelab says, &ldquo;Here&rsquo;s root access. Good luck.&rdquo;</p>
+<p>That&rsquo;s my love language.</p>
+<h2 id="the-brain-proxmox-on-old-hardware"><strong>The Brain: Proxmox on Old Hardware</strong><a href="#the-brain-proxmox-on-old-hardware" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>I wiped the machine, installed <a href="https://www.proxmox.com/en/products/proxmox-virtual-environment/overview"><strong>Proxmox</strong></a> directly on the <strong>128 GB SSD</strong> with ext4 (ZFS refused to boot on this grandpa system), and suddenly this dusty corporate PC became a <strong>playground</strong>.</p>
+<p>A playground where I could break things, fix things, and rebuild things at 3 AM because I felt like it.</p>
+<h2 id="nothing-is-public-facing--and-that"><strong>Nothing Is Public-Facing — And That&rsquo;s the Magic</strong><a href="#nothing-is-public-facing--and-that" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>People flex self-hosted setups with reverse proxies, DNS records, Cloudflare tunnels…</p>
+<p>Cool setups, sure.<br>
+But I didn&rsquo;t want the internet anywhere near my stuff.</p>
+<p>So I built an isolated little universe:</p>
+<ul>
+<li>A <strong>virtual network (10.20.30.0/24)</strong></li>
+<li>A <strong>virtual router (IPFire)</strong></li>
+<li>A <strong>virtual DNS (Pi-hole)</strong></li>
+<li>A <strong>VPN gatekeeper (NetBird)</strong></li>
+<li>A <strong>reverse-proxy layer (Traefik)</strong></li>
+<li>DNS management via <strong>Cloudflare</strong></li>
+</ul>
+<p>If I&rsquo;m outside my house, I open NetBird, connect, and boom — I&rsquo;m <em>inside</em> my homelab like I never left.</p>
+<p>No exposed ports.<br>
+No reverse proxy stress.<br>
+No &ldquo;rate-limited by Let&rsquo;s Encrypt.&rdquo;<br>
+Just… peace.</p>
+<h3 id="the-network-diagram-my-tiny-internet"><strong>The Network Diagram (My Tiny Internet)</strong><a href="#the-network-diagram-my-tiny-internet" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<hr>
+<p><img src="/posts/my-homelab-my-rules/assets/home-lab-secure-access-architecture.png" alt="Homelab network diagram showing virtual network 10.20.30.0/24 with IPFire VM 101, Pi-hole LXC 201, and Docker VM 100 containing Traefik reverse proxy routing to Immich, Vaultwarden, n8n, File Browser, Stirling-PDF, OmniTools, and CouchDB on Docker bridge network 192.168.204.0/24"></p>
+<h2 id="the-proxy-network--a-private-layer-for-user-facing-apps"><strong>The Proxy Network — A Private Layer for User-Facing Apps</strong><a href="#the-proxy-network--a-private-layer-for-user-facing-apps" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>To keep everything locked down and under <em>my</em> control:</p>
+<ul>
+<li>I created a dedicated Docker bridge network called <strong><code>proxy</code></strong> with subnet <strong>192.168.204.0/24</strong>.</li>
+<li>Every container that serves a UI or web service to <em>me</em> runs inside this network—Immich, Stirling-PDF, Vaultwarden, OmniTools, etc.</li>
+<li><strong>Traefik</strong> is the only container exposed to the outer virtual network (10.20.30.0/24) via the Docker host. It handles all inbound routing, TLS termination, and service discovery.</li>
+<li>Internally, no other container has direct host-LAN exposure. Services communicate only via the <code>proxy</code> network and Traefik rule sets.</li>
+<li>External access is only via the VPN (NetBird). No public ports are exposed, no &ldquo;open to the world&rdquo; services.</li>
+<li>DNS is managed by <strong>Cloudflare</strong>, but the subdomains resolve only inside the VPN-linked environment.</li>
+<li>This architecture gives me:
+<ul>
+<li>Strong network isolation</li>
+<li>Centralized, manageable ingress (Traefik)</li>
+<li>Minimal attack surface</li>
+<li>Control over service routing and TLS certs</li>
+<li>Peace of mind</li>
+</ul>
+</li>
+</ul>
+<p><strong>In short</strong>: everything user-facing is behind one gate. I hold the key.</p>
+<h2 id="the-services-i-run-and-why-they-matter-to-me"><strong>The Services I Run (and Why They Matter to Me)</strong><a href="#the-services-i-run-and-why-they-matter-to-me" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<h3 id="1-immich--my-photos-my-rules">1. <a href="https://immich.app/">Immich</a> — My Photos, My Rules<a href="#1-immich--my-photos-my-rules" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Google Photos is convenient until it isn&rsquo;t.
+Until they change a policy.
+Until they lock an account.
+Until your entire visual history depends on a corporation&rsquo;s mood.</p>
+<p>Immich lives on my HDD.
+No charges.
+No compression.
+No unknown eyes.</p>
+<p>It&rsquo;s the first time my memories feel truly <em>mine</em>.</p>
+<h3 id="2-vaultwarden--passwords-shouldnt-live-in-someone-elses-building">2. <a href="https://github.com/dani-garcia/vaultwarden">Vaultwarden</a> — Passwords Shouldn&rsquo;t Live in Someone Else&rsquo;s Building<a href="#2-vaultwarden--passwords-shouldnt-live-in-someone-elses-building" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>A local password manager hits different.</p>
+<p>No breach headlines.
+No tracking.
+And it gives me <strong>Bitwarden premium features (TOTP!)</strong> without the premium price.</p>
+<p>Self-hosting this was the moment I realised:</p>
+<blockquote>
+<p>&ldquo;Privacy doesn&rsquo;t require money. Just intent.&rdquo;</p></blockquote>
+<h3 id="3-netbird--my-portal-back-home">3. <a href="https://netbird.io/">NetBird</a> — My Portal Back Home<a href="#3-netbird--my-portal-back-home" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>I love the feeling of opening NetBird on my phone miles away and suddenly being <em>inside</em> my homelab like I never left.</p>
+<p>It&rsquo;s magic. WireGuard-powered magic.</p>
+<h3 id="4-traefik--the-entry-gate-i-control">4. <a href="https://traefik.io/">Traefik</a> — The Entry Gate I Control<a href="#4-traefik--the-entry-gate-i-control" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Traefik handles all the routing of services inside my virtual network. It dynamically discovers containers and maps domains internally, while I manage DNS via Cloudflare. It also manages TLS certificates via <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>, keeping everything secure without manual certificate juggling.</p>
+<h3 id="5-cloudflare-dns--domain-management-my-terms">5. <a href="https://cloudflare.com/">Cloudflare</a> DNS — Domain Management, My Terms<a href="#5-cloudflare-dns--domain-management-my-terms" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Instead of relying solely on dynamic IPs or exposing ports to the world, I use Cloudflare for DNS management. Cloudflare&rsquo;s protections let me keep things under my control without surrendering my data.</p>
+<h3 id="6-n8n--automation-without-asking-permission">6. <a href="https://n8n.io/">n8n</a> — Automation Without Asking Permission<a href="#6-n8n--automation-without-asking-permission" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Cloud automation tools treat you like a child:
+&ldquo;You&rsquo;ve hit your free limit.&rdquo;
+&ldquo;You can run only X workflows.&rdquo;
+&ldquo;Upgrade to Pro.&rdquo;</p>
+<p>n8n is like:</p>
+<blockquote>
+<p>&ldquo;Do whatever you want, I don&rsquo;t care.&rdquo;</p></blockquote>
+<p>And I love that energy.</p>
+<h3 id="7-obsync-couchdb--my-obsidian-synced-like-a-superpower">7. Obsync (<a href="https://couchdb.apache.org/">CouchDB</a>) — My Obsidian, Synced Like a Superpower<a href="#7-obsync-couchdb--my-obsidian-synced-like-a-superpower" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>There&rsquo;s an extension called <a href="#ZgotmplZ">&ldquo;Self-hosted LiveSync&rdquo;</a> that syncs Obsidian via CouchDB.</p>
+<p>I added a CouchDB Docker container.
+Connected it.
+And my notes sync faster than most paid sync services.</p>
+<p>Also:
+Zero cloud.
+Zero tracking.
+Zero dependency.</p>
+<h3 id="8-omnitools--a-toolbox-that-doesnt-sell-my-files">8. <a href="https://omnitools.app/">OmniTools</a> — A Toolbox That Doesn&rsquo;t Sell My Files<a href="#8-omnitools--a-toolbox-that-doesnt-sell-my-files" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Image converters.
+Document compressors.
+All local.
+All private.</p>
+<p>Because sending a passport scan to some random website just to make it 2 MB smaller always felt like a horror story waiting to happen.</p>
+<h3 id="9-stirling-pdf--my-document-converter-my-terms">9. <a href="https://github.com/Stirling-Tools/Stirling-PDF">Stirling-PDF</a> — My Document Converter, My Terms<a href="#9-stirling-pdf--my-document-converter-my-terms" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>I recently hosted <strong>Stirling-PDF</strong>, an open-source PDF conversion/processing service. No external service. No hidden tracking. If I need to generate or convert PDFs, it happens in my domain, controlled by me.</p>
+<h2 id="subdomains-yes-public-never"><strong>Subdomains? Yes. Public? Never.</strong><a href="#subdomains-yes-public-never" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>I use private DNS names like:</p>
+<pre tabindex="0"><code>immich.pve.razobeckett.xyz  
+vaultwarden.pve.razobeckett.xyz  
+pihole.pve.razobeckett.xyz
+stirling-pdf.pve.razobeckett.xyz
+</code></pre><p>They resolve <em>only</em> inside the NetBird network (and via internal DNS + Traefik) and through Cloudflare-managed DNS. From the outside world, these domains don&rsquo;t even exist.</p>
+<h2 id="why-this-homelab-means-so-much-to-me"><strong>Why This Homelab Means So Much to Me</strong><a href="#why-this-homelab-means-so-much-to-me" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>It wasn&rsquo;t built with expensive hardware.
+It wasn&rsquo;t built with enterprise gear.
+It wasn&rsquo;t built because I &ldquo;needed&rdquo; it.</p>
+<p>It was built because:</p>
+<ul>
+<li>I wanted to own my data</li>
+<li>I wanted to learn</li>
+<li>I wanted to break things without consequences</li>
+<li>And because it feels good knowing your world runs on your terms</li>
+</ul>
+<p>Most people chase the cloud. I chased <strong>control</strong>.</p>
+<h2 id="future-upgrades"><strong>Future Upgrades</strong><a href="#future-upgrades" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<ul>
+<li>More RAM</li>
+<li>A small NAS</li>
+<li>ZFS someday</li>
+<li>Monitoring (Grafana + Prometheus)</li>
+<li>UPS for power cuts</li>
+</ul>
+<p>But honestly?
+Even if I never upgrade anything, this setup already gives me something priceless:</p>
+<p>A private corner of the internet that belongs only to me.</p>
+<h2 id="final-thoughts"><strong>Final Thoughts</strong><a href="#final-thoughts" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<hr>
+<p>This homelab isn&rsquo;t perfect.
+It&rsquo;s not powerful.
+It&rsquo;s not impressive by enterprise standards.</p>
+<p>But it&rsquo;s <strong>real</strong>, and it&rsquo;s <strong>mine</strong>, and it was built with intention.</p>
+<p>We live in a world where companies want your photos, your passwords, your notes, your documents, your habits, your life.</p>
+<p>My homelab is my way of saying:</p>
+<p><strong>&ldquo;No. I&rsquo;ll take it from here.&rdquo;</strong></p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="https://blog.razobeckett.xyz/posts/how-to-git-it/" class="button inline next">
+         [<span class="button__text">How to git it!</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <div id="comments" style="margin-top: 2rem;">
+  <script src="https://giscus.app/client.js"
+          data-repo="razobeckett/blog"
+          data-repo-id="R_kgDOPSPXbA"
+          data-category="General"
+          data-category-id="DIC_kwDOPSPXbM4CtajT"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="transparent_dark"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

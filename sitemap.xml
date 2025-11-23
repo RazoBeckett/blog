@@ -4,12 +4,97 @@
  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-      <loc>https://blog.razobeckett.xyz/tags/beginner-friendly/</loc>
-      <lastmod>2025-07-27T00:00:00Z</lastmod>
+      <loc>https://blog.razobeckett.xyz/categories/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
       <priority>0.80</priority>
     </url>
     <url>
-      <loc>https://blog.razobeckett.xyz/categories/</loc>
+      <loc>https://blog.razobeckett.xyz/tags/cloudflare/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/devops/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/homelab/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/categories/infrastructure/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/categories/linux/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/posts/my-homelab-my-rules/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/netbird/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/networking/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/pihole/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/posts/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/privacy/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/proxmox/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>1.00</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/self-hosted/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/categories/self-hosting/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/traefik/</loc>
+      <lastmod>2025-11-23T00:00:00Z</lastmod>
+      <priority>0.80</priority>
+    </url>
+    <url>
+      <loc>https://blog.razobeckett.xyz/tags/beginner-friendly/</loc>
       <lastmod>2025-07-27T00:00:00Z</lastmod>
       <priority>0.80</priority>
     </url>
@@ -39,21 +124,6 @@
       <priority>0.80</priority>
     </url>
     <url>
-      <loc>https://blog.razobeckett.xyz/posts/</loc>
-      <lastmod>2025-07-27T00:00:00Z</lastmod>
-      <priority>0.80</priority>
-    </url>
-    <url>
-      <loc>https://blog.razobeckett.xyz/</loc>
-      <lastmod>2025-07-27T00:00:00Z</lastmod>
-      <priority>1.00</priority>
-    </url>
-    <url>
-      <loc>https://blog.razobeckett.xyz/tags/</loc>
-      <lastmod>2025-07-27T00:00:00Z</lastmod>
-      <priority>0.80</priority>
-    </url>
-    <url>
       <loc>https://blog.razobeckett.xyz/categories/tools/</loc>
       <lastmod>2025-07-27T00:00:00Z</lastmod>
       <priority>0.80</priority>
@@ -70,11 +140,6 @@
     </url>
     <url>
       <loc>https://blog.razobeckett.xyz/tags/archlinux/</loc>
-      <lastmod>2025-06-24T00:00:00Z</lastmod>
-      <priority>0.80</priority>
-    </url>
-    <url>
-      <loc>https://blog.razobeckett.xyz/categories/linux/</loc>
       <lastmod>2025-06-24T00:00:00Z</lastmod>
       <priority>0.80</priority>
     </url>
