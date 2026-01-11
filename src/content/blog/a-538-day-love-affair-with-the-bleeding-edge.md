@@ -2,6 +2,7 @@
 title: 'A 538-Day Love Affair with the Bleeding Edge'
 description: "I gave NixOS a real shot, but Arch Linux is still home. Here's why I live in organized chaos."
 pubDate: 2025-06-24
+heroImage: '../../assets/blog/a-538-day-love-affair-with-the-bleeding-edge/cover.png'
 ---
 
 I once told someone, "Nix is for stability. I live in organized chaos." I didn't realize how true that was until I tried to leave.

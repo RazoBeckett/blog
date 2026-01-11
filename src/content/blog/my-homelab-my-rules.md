@@ -2,6 +2,7 @@
 title: 'My Homelab, My Rules'
 description: 'Why I built a homelab on budget hardware, and how it became the one place where everything finally feels mine.'
 pubDate: 2025-11-23
+heroImage: '../../assets/blog/my-homelab-my-rules/cover.png'
 ---
 
 ### …and why it became the one place where everything finally feels *mine*
@@ -18,6 +19,11 @@ It started with **one freelance job** and a second-hand **HP EliteDesk 800 G1 SF
 Nothing fancy. Nothing expensive.  
 Just enough.  
 And enough is powerful when you actually know what you want.
+
+### Some pictures of server seating in the corner
+
+![Physical Image 1](../../assets/blog/my-homelab-my-rules/physical-server-1.jpeg)
+![Physical Image 2](../../assets/blog/my-homelab-my-rules/physical-server-2.jpeg)
 
 ## **Why I Even Wanted a Homelab**
 
@@ -74,6 +80,12 @@ No exposed ports.
 No reverse proxy stress.  
 No "rate-limited by Let's Encrypt."  
 Just… peace.
+
+### **The Network Diagram (My Tiny Internet)**
+
+---
+
+![Homelab network diagram showing virtual network 10.20.30.0/24 with IPFire VM 101, Pi-hole LXC 201, and Docker VM 100 containing Traefik reverse proxy routing to Immich, Vaultwarden, n8n, File Browser, Stirling-PDF, OmniTools, and CouchDB on Docker bridge network 192.168.204.0/24](../../assets/blog/my-homelab-my-rules/home-lab-secure-access-architecture.png)
 
 ## **The Proxy Network — A Private Layer for User-Facing Apps**
 
