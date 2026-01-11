@@ -10,16 +10,36 @@ import ThemeToggle from './ThemeToggle.astro';
 			<span class="logo-mark">●</span>
 			{SITE_TITLE}
 		</a>
-		<div class="nav-right">
+		
+		<button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">
+			<span class="hamburger-line" id="line1"></span>
+			<span class="hamburger-line" id="line2"></span>
+			<span class="hamburger-line" id="line3"></span>
+		</button>
+		
+		<div class="nav-right" id="nav-right">
 			<div class="nav-links">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
 				<HeaderLink href="https://link.razobeckett.xyz/pfo?utm_source=blog" target="_blank">Portfolio</HeaderLink>
+			</div>
+			<ThemeToggle />
+		</div>
+	</nav>
+	
+	<!-- Mobile menu overlay -->
+	<div class="mobile-menu-overlay" id="mobile-menu-overlay">
+		<div class="mobile-menu-content">
+			<a href="/" class="mobile-link">Home</a>
+			<a href="/blog" class="mobile-link">Blog</a>
+			<a href="/about" class="mobile-link">About</a>
+			<a href="https://link.razobeckett.xyz/pfo?utm_source=blog" target="_blank" rel="noopener noreferrer" class="mobile-link">Portfolio</a>
+			<div class="mobile-theme-toggle">
 				<ThemeToggle />
 			</div>
 		</div>
-	</nav>
+	</div>
 </header>
 
 <style>
@@ -57,6 +77,8 @@ import ThemeToggle from './ThemeToggle.astro';
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		z-index: 102;
+		position: relative;
 	}
 
 	.logo-mark {
@@ -76,13 +98,160 @@ import ThemeToggle from './ThemeToggle.astro';
 		gap: 0.5rem;
 	}
 	
+	/* Mobile menu button - hidden on desktop */
+	.mobile-menu-btn {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		background: none;
+		border: none;
+		cursor: pointer;
+		z-index: 102;
+		position: relative;
+	}
+	
+	.hamburger-line {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background-color: var(--color-text-primary);
+		border-radius: 2px;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+	
+	/* Mobile overlay menu */
+	.mobile-menu-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: #fffdf7;
+		z-index: 101;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+	
+	:global([data-theme="dark"]) .mobile-menu-overlay {
+		background-color: #1a1a1c;
+	}
+	
+	.mobile-menu-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 1.5rem;
+		padding: 2rem;
+	}
+	
+	.mobile-link {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: var(--color-text-primary);
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		transition: color 0.2s ease;
+	}
+	
+	.mobile-link:hover {
+		color: var(--color-accent);
+	}
+	
+	.mobile-theme-toggle {
+		margin-top: 1rem;
+	}
+
 	@media (max-width: 720px) {
 		nav {
 			padding: 1rem 1.25rem;
 		}
-
+		
+		.mobile-menu-btn {
+			display: flex;
+		}
+		
 		.nav-right {
-			gap: 1rem;
+			display: none;
+		}
+	}
+	
+	/* Hide overlay on desktop */
+	@media (min-width: 721px) {
+		.mobile-menu-overlay {
+			display: none;
 		}
 	}
 </style>
+
+<script>
+	function initMobileMenu() {
+		const btn = document.getElementById('mobile-menu-btn') as HTMLButtonElement | null;
+		const overlay = document.getElementById('mobile-menu-overlay') as HTMLDivElement | null;
+		const line1 = document.getElementById('line1') as HTMLSpanElement | null;
+		const line2 = document.getElementById('line2') as HTMLSpanElement | null;
+		const line3 = document.getElementById('line3') as HTMLSpanElement | null;
+		
+		if (!btn || !overlay || !line1 || !line2 || !line3) return;
+		
+		let isOpen = false;
+		
+		const openMenu = () => {
+			isOpen = true;
+			overlay.style.opacity = '1';
+			overlay.style.visibility = 'visible';
+			btn.setAttribute('aria-expanded', 'true');
+			document.body.style.overflow = 'hidden';
+			
+			// Animate hamburger to X
+			line1.style.transform = 'translateY(7px) rotate(45deg)';
+			line2.style.opacity = '0';
+			line3.style.transform = 'translateY(-7px) rotate(-45deg)';
+		};
+		
+		const closeMenu = () => {
+			isOpen = false;
+			overlay.style.opacity = '0';
+			overlay.style.visibility = 'hidden';
+			btn.setAttribute('aria-expanded', 'false');
+			document.body.style.overflow = '';
+			
+			// Reset hamburger
+			line1.style.transform = '';
+			line2.style.opacity = '';
+			line3.style.transform = '';
+		};
+		
+		const toggleMenu = () => {
+			if (isOpen) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		};
+		
+		btn.addEventListener('click', toggleMenu);
+		
+		// Close menu when clicking a link
+		overlay.querySelectorAll('a').forEach(link => {
+			link.addEventListener('click', closeMenu);
+		});
+		
+		// Close menu on escape key
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && isOpen) {
+				closeMenu();
+			}
+		});
+	}
+	
+	initMobileMenu();
+	document.addEventListener('astro:after-swap', initMobileMenu);
+</script>
