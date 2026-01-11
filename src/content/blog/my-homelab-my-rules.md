@@ -167,7 +167,7 @@ I recently hosted **Stirling-PDF**, an open-source PDF conversion/processing ser
 
 I use private DNS names like:
 
-```
+```md
 immich.pve.razobeckett.xyz  
 vaultwarden.pve.razobeckett.xyz  
 pihole.pve.razobeckett.xyz

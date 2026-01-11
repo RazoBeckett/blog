@@ -16,13 +16,13 @@ An idea strikes at 10 PM. A cool new CLI tool is trending on GitHub. My hands ar
 
 On Arch, it's a heartbeat:
 
-```
+```sh
 yay -S some-cool-package
 ```
 
 Five minutes later, I'm running it. Maybe it's brilliant. Maybe it's useless. Ten minutes after that, I've satisfied my curiosity, and it's gone.
 
-```
+```sh
 sudo pacman -Rns some-cool-package
 ```
 
