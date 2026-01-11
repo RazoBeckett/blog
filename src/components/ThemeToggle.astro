@@ -2,7 +2,7 @@
 
 ---
 
-<button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+<button class="theme-toggle" type="button" aria-label="Toggle dark mode">
   <div class="toggle-track">
     <div class="toggle-thumb">
       <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -24,7 +24,7 @@
 </button>
 
 <style>
-  #theme-toggle {
+  .theme-toggle {
     background: none;
     border: none;
     padding: 0;
@@ -42,7 +42,7 @@
     border: 1px solid var(--color-border);
   }
   
-  #theme-toggle:hover .toggle-track {
+  .theme-toggle:hover .toggle-track {
     border-color: var(--color-border-strong);
   }
 
@@ -98,8 +98,8 @@
 
 <script>
   function initTheme() {
-    const toggle = document.getElementById('theme-toggle');
-    if (!toggle) return;
+    const toggles = document.querySelectorAll('.theme-toggle');
+    if (toggles.length === 0) return;
 
     const getTheme = (): string => {
       const stored = localStorage.getItem('theme');
@@ -112,12 +112,14 @@
       localStorage.setItem('theme', theme);
     };
 
-    toggle.addEventListener('click', () => {
-      document.body.classList.add('theme-transition');
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-      setTimeout(() => document.body.classList.remove('theme-transition'), 300);
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        document.body.classList.add('theme-transition');
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        setTimeout(() => document.body.classList.remove('theme-transition'), 300);
+      });
     });
 
     setTheme(getTheme());
