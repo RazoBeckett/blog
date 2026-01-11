@@ -16,99 +16,151 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
+			<section class="blog-header">
+				<h1 class="page-title">The Blog</h1>
+				<p class="page-subtitle">Reflections on design, code, and creativity.</p>
+			</section>
+
+			<section class="blog-grid">
+				<ul class="post-list">
+					{posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`} class="post-card">
+								<div class="card-image-wrapper">
 									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+										<Image 
+											width={720} 
+											height={360} 
+											src={post.data.heroImage} 
+											alt="" 
+											class="card-image"
+										/>
 									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
+								</div>
+								<div class="card-content">
+									<div class="card-meta">
 										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
+									</div>
+									<h2 class="card-title">{post.data.title}</h2>
+									{post.data.description && (
+										<p class="card-excerpt">{post.data.description}</p>
+									)}
+								</div>
+							</a>
+						</li>
+					))}
 				</ul>
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.blog-header {
+		padding: 2rem 0 4rem;
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.page-title {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+		letter-spacing: -0.04em;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+	}
+
+	.post-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.post-card {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		height: 100%;
+	}
+
+	.card-image-wrapper {
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		background-color: var(--color-bg-tertiary);
+		aspect-ratio: 3/2;
+		margin-bottom: 1.5rem;
+		position: relative;
+	}
+	
+	.card-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform var(--transition-slow);
+	}
+
+	.post-card:hover .card-image {
+		transform: scale(1.03);
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.card-meta {
+		font-size: 0.8125rem;
+		color: var(--color-text-tertiary);
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 500;
+	}
+
+	.card-title {
+		font-size: 1.75rem;
+		margin: 0 0 1rem 0;
+		color: var(--color-text-primary);
+		line-height: 1.2;
+		transition: color var(--transition-fast);
+	}
+
+	.post-card:hover .card-title {
+		color: var(--color-accent);
+	}
+
+	.card-excerpt {
+		font-size: 1.0625rem;
+		color: var(--color-text-secondary);
+		line-height: 1.6;
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	@media (max-width: 720px) {
+		.post-list {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+		
+		.page-title {
+			font-size: 2.5rem;
+		}
+	}
+</style>

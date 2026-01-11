@@ -1,0 +1,128 @@
+---
+
+---
+
+<button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+  <div class="toggle-track">
+    <div class="toggle-thumb">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </div>
+  </div>
+</button>
+
+<style>
+  #theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text-primary);
+  }
+
+  .toggle-track {
+    width: 48px;
+    height: 26px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-pill);
+    position: relative;
+    transition: background-color var(--transition-base);
+    border: 1px solid var(--color-border);
+  }
+  
+  #theme-toggle:hover .toggle-track {
+    border-color: var(--color-border-strong);
+  }
+
+  .toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-surface);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global([data-theme="dark"]) .toggle-thumb {
+    transform: translateX(22px);
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+  }
+
+  .icon-sun,
+  .icon-moon {
+    position: absolute;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
+  
+  .icon-sun {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--color-text-secondary);
+  }
+  
+  .icon-moon {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  :global([data-theme="dark"]) .icon-sun {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  :global([data-theme="dark"]) .icon-moon {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--color-bg);
+  }
+</style>
+
+<script>
+  function initTheme() {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    const getTheme = (): string => {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    const setTheme = (theme: string) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.add('theme-transition');
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+      setTimeout(() => document.body.classList.remove('theme-transition'), 300);
+    });
+
+    setTheme(getTheme());
+  }
+
+  initTheme();
+  document.addEventListener('astro:after-swap', initTheme);
+</script>

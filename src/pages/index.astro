@@ -1,8 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const recentPosts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -13,37 +19,270 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<div class="hero-content">
+					<h1 class="hero-title">Design. Code. Create.</h1>
+					<p class="hero-text">
+						A thoughtful collection of ideas and experiments. Exploring the intersection of design, technology, and storytelling.
+					</p>
+					<div class="hero-actions">
+						<a href="/blog" class="btn btn-primary">Read the Blog</a>
+						<a href="/about" class="btn btn-secondary">About Me</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="featured-section">
+				<div class="section-header">
+					<span class="section-label">Latest</span>
+					<h2 class="section-title">Writings</h2>
+				</div>
+				
+				<div class="post-list">
+					{recentPosts.map((post, index) => (
+						<a href={`/blog/${post.id}/`} class="post-item">
+							<div class="post-item-content">
+								<span class="post-number">0{index + 1}</span>
+								<div class="post-info">
+									<h3 class="post-title">{post.data.title}</h3>
+									{post.data.description && (
+										<p class="post-excerpt">{post.data.description}</p>
+									)}
+									<div class="post-meta">
+										<FormattedDate date={post.data.pubDate} />
+									</div>
+								</div>
+							</div>
+							<div class="post-arrow">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="5" y1="12" x2="19" y2="12"></line>
+									<polyline points="12 5 19 12 12 19"></polyline>
+								</svg>
+							</div>
+						</a>
+					))}
+				</div>
+
+				<a href="/blog" class="view-all-link">
+					<span>View all articles</span>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+						<polyline points="12 5 19 12 12 19"></polyline>
+					</svg>
+				</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.hero {
+		padding: 4rem 0 6rem;
+		border-bottom: 1px solid var(--color-border);
+		margin-bottom: 4rem;
+	}
+
+	.hero-content {
+		max-width: 700px;
+	}
+
+	.hero-title {
+		font-size: 4.5rem;
+		line-height: 1;
+		margin-bottom: 1.5rem;
+		color: var(--color-text-primary);
+		letter-spacing: -0.04em;
+	}
+
+	.hero-text {
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		max-width: 560px;
+		margin: 0 0 2.5rem;
+		line-height: 1.6;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.section-header {
+		margin-bottom: 3rem;
+	}
+
+	.section-label {
+		display: block;
+		font-size: 0.8125rem;
+		color: var(--color-accent);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		margin: 0;
+		font-weight: 700;
+		letter-spacing: -0.03em;
+	}
+
+	.post-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.post-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		padding: 2rem 0;
+		border-top: 1px solid var(--color-border);
+		text-decoration: none;
+		transition: background-color var(--transition-fast);
+	}
+
+	.post-item:last-child {
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.post-item:hover {
+		background-color: var(--color-bg-secondary);
+		margin: 0 -1.5rem;
+		padding: 2rem 1.5rem;
+	}
+
+	.post-item-content {
+		display: flex;
+		align-items: flex-start;
+		gap: 2rem;
+		flex: 1;
+	}
+
+	.post-number {
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: var(--color-text-tertiary);
+		font-family: "SF Mono", "Fira Code", monospace;
+		letter-spacing: -0.02em;
+		min-width: 2rem;
+		padding-top: 0.25rem;
+	}
+
+	.post-info {
+		flex: 1;
+	}
+
+	.post-title {
+		font-size: 1.5rem;
+		margin: 0 0 0.5rem 0;
+		color: var(--color-text-primary);
+		line-height: 1.3;
+		transition: color var(--transition-fast);
+	}
+
+	.post-item:hover .post-title {
+		color: var(--color-accent);
+	}
+
+	.post-excerpt {
+		font-size: 1rem;
+		color: var(--color-text-secondary);
+		line-height: 1.5;
+		margin: 0 0 0.75rem 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.post-meta {
+		font-size: 0.8125rem;
+		color: var(--color-text-tertiary);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.post-arrow {
+		color: var(--color-text-tertiary);
+		transition: color var(--transition-fast), transform var(--transition-fast);
+	}
+
+	.post-item:hover .post-arrow {
+		color: var(--color-accent);
+		transform: translateX(4px);
+	}
+
+	.view-all-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 2.5rem;
+		padding: 0.875rem 1.5rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--color-text-primary);
+		background-color: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-pill);
+		transition: all var(--transition-fast);
+	}
+
+	.view-all-link:hover {
+		background-color: var(--color-accent);
+		border-color: var(--color-accent);
+		color: var(--color-text-inverted);
+	}
+
+	.view-all-link svg {
+		transition: transform var(--transition-fast);
+	}
+
+	.view-all-link:hover svg {
+		transform: translateX(3px);
+	}
+
+	@media (max-width: 720px) {
+		.hero {
+			padding: 2rem 0 3rem;
+		}
+
+		.hero-title {
+			font-size: 3rem;
+		}
+
+		.section-title {
+			font-size: 2.25rem;
+		}
+
+		.post-item {
+			padding: 1.5rem 0;
+		}
+
+		.post-item:hover {
+			margin: 0 -1.25rem;
+			padding: 1.5rem 1.25rem;
+		}
+
+		.post-item-content {
+			gap: 1rem;
+		}
+
+		.post-number {
+			display: none;
+		}
+
+		.post-title {
+			font-size: 1.25rem;
+		}
+
+		.post-arrow {
+			display: none;
+		}
+	}
+</style>
