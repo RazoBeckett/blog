@@ -32,7 +32,7 @@ OpenCode is an open chassis. It doesn't ask you to hack the system; it asks you 
 
 ## The Harness is the Difference
 
-The reason I am even writing this is because a friend asked me if Copilot is any good in OpenCode. He tried it in VS Code and it felt mid. Look, I am going to be real here. The VS Code agent harness completely sucks. It doesn't matter how good the model is if the harness is limiting what it can actually do. The model is a brain in a jar, but the agent is the robot with the keys to your house. It doesn't matter where you get the brain. It matters what the harness lets that brain do to your codebase.
+The reason I am even writing this is because a friend asked me if Copilot is any good in OpenCode. He tried Copilot in VS Code and it felt mid. Look, I am going to be real here. The VS Code agent harness completely sucks. It doesn't matter how good the model is if the harness is limiting what it can actually do. The model is a brain in a jar, but the agent is the robot with the keys to your house. It doesn't matter where you get the brain. It matters what the harness lets that brain do to your codebase.
 
 ---
 
