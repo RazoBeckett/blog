@@ -117,6 +117,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		margin-bottom: 2rem;
 	}
 
+	.prose :global(a) {
+		color: var(--color-accent-blue);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+		text-decoration-thickness: 0.08em;
+	}
+
+	.prose :global(a:hover) {
+		color: var(--color-accent-hover);
+	}
+
 	.prose :global(h2) {
 		margin-top: 3.5rem;
 		margin-bottom: 1.5rem;
