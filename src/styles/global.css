@@ -1,7 +1,7 @@
 :root {
-  --color-bg: #fffdf7;
-  --color-bg-secondary: #f4f1ea;
-  --color-bg-tertiary: #ebe6dc;
+  --color-bg: #f5f4ed;
+  --color-bg-secondary: #faf9f5;
+  --color-bg-tertiary: #e8e6dc;
   
   --color-surface: #ffffff;
   --color-surface-hover: #faf9f6;
@@ -9,22 +9,22 @@
   --color-text-primary: #2c2c2c;
   --color-text-secondary: #595959;
   --color-text-tertiary: #8c8c8c;
-  --color-text-inverted: #fffdf7;
+  --color-text-inverted: #f5f4ed;
   
-  --color-border: #e6e2d8;
-  --color-border-subtle: #f0ede6;
+  --color-border: #e0ddd2;
+  --color-border-subtle: #e8e5da;
   --color-border-strong: #d1cdc5;
   
-  --color-accent-sage: #9cb4a3;
-  --color-accent-lavender: #b8b0c8;
-  --color-accent-peach: #e8c4b8;
-  --color-accent-blue: #a3b8c8;
-  --color-accent-yellow: #e8dcc2;
+  --color-accent-sage: #1B365D;
+  --color-accent-lavender: #2D5A8A;
+  --color-accent-peach: #3A6B9D;
+  --color-accent-blue: #1B365D;
+  --color-accent-yellow: #4A7AB8;
   
   --color-accent: var(--color-accent-sage);
-  --color-accent-hover: #8ca392;
+  --color-accent-hover: #2D5A8A;
   
-  --color-code-bg: #f4f1ea;
+  --color-code-bg: #e8e6dc;
   --color-code-text: #4a4a4a;
   
   --shadow-card: 0 0 0 1px var(--color-border);
