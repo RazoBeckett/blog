@@ -74,6 +74,13 @@
 }
 
 @font-face {
+  font-family: "TsangerJinKai02";
+  src: url("/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Atkinson";
   src: url("/fonts/atkinson-regular.woff") format("woff");
   font-weight: 400;
@@ -102,7 +109,7 @@ html {
 }
 
 body {
-  font-family: "Solway", Georgia, serif;
+  font-family: "TsangerJinKai02", "Newsreader", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
