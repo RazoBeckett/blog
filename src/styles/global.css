@@ -212,7 +212,7 @@ li::marker {
 
 .btn-primary:hover {
   background-color: var(--color-accent);
-  color: var(--color-text-primary);
+  color: var(--color-bg);
   border-color: var(--color-accent);
 }
 
