@@ -75,24 +75,8 @@
 
 @font-face {
   font-family: "TsangerJinKai02";
-  src: url("/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+  src: url("/fonts/TsangerJinKai02-W04.woff2") format("woff2");
   font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
   font-display: swap;
 }
 
