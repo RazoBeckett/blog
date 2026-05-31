@@ -76,20 +76,9 @@
 @font-face {
   font-family: "TsangerJinKai02";
   src: url("/fonts/TsangerJinKai02-W04.woff2") format("woff2");
-  font-weight: 500;
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -104,6 +93,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
