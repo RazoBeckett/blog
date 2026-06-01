@@ -218,10 +218,62 @@
   }
 }
 
-.theme-transition,
-.theme-transition *,
-.theme-transition *::before,
-.theme-transition *::after {
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition-delay: 0s !important;
+/* Pixelate Dissolve Theme Transition */
+
+:root {
+  --expo-out: linear(
+    0 0%, 0.1684 2.66%, 0.3165 5.49%,
+    0.446 8.52%, 0.5581 11.78%,
+    0.6535 15.29%, 0.7341 19.11%,
+    0.8011 23.3%, 0.8557 27.93%,
+    0.8962 32.68%, 0.9283 38.01%,
+    0.9529 44.08%, 0.9711 51.14%,
+    0.9833 59.06%, 0.9915 68.74%, 1 100%
+  );
 }
+
+html.pixelate-dissolve-transition::view-transition-group(root) {
+  animation-timing-function: var(--expo-out);
+}
+
+html.pixelate-dissolve-transition::view-transition-old(root) {
+  animation: pixelate-out 0.6s steps(10) forwards;
+  z-index: 2;
+}
+
+html.pixelate-dissolve-transition::view-transition-new(root) {
+  animation: pixelate-in 0.6s steps(10) forwards;
+  animation-delay: 0.3s;
+  z-index: 1;
+}
+
+@keyframes pixelate-out {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(10px);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes pixelate-in {
+  0% {
+    filter: blur(20px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(10px);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+

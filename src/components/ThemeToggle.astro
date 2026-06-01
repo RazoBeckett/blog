@@ -41,11 +41,19 @@
 
     toggles.forEach(toggle => {
       toggle.addEventListener('click', () => {
-        document.body.classList.add('theme-transition');
         const current = document.documentElement.getAttribute('data-theme');
         const next = current === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-        setTimeout(() => document.body.classList.remove('theme-transition'), 300);
+
+        const html = document.documentElement;
+        html.classList.add('pixelate-dissolve-transition');
+
+        const transition = document.startViewTransition(() => {
+          setTheme(next);
+        });
+
+        transition.finished.then(() => {
+          html.classList.remove('pixelate-dissolve-transition');
+        });
       });
     });
 
