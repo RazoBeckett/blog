@@ -7,8 +7,8 @@ import Layout from '../layouts/BlogPost.astro';
 	description="Builder, Linux Enthusiast, Lifelong Learner."
 	pubDate={new Date('2025-01-01')}
 >
-	<section class="intro-card">
-		<p class="eyebrow">Welcome to my little corner of the web!</p>
+	<section class="rounded-lg border border-border bg-bg-secondary p-8 shadow-card max-[720px]:p-5">
+		<p class="mb-3 text-sm font-medium uppercase tracking-[0.06em] text-text-secondary">Welcome to my little corner of the web!</p>
 		<h2>Hey, I'm Razo Beckett</h2>
 		<p>
 			I'm a curious builder who enjoys creating software, exploring Linux, and learning how
@@ -49,28 +49,3 @@ import Layout from '../layouts/BlogPost.astro';
 
 	<p>Thanks for stopping by. I'm glad you're here.</p>
 </Layout>
-
-<style>
-	.intro-card {
-		padding: 2rem;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-lg);
-		background: var(--color-bg-secondary);
-		box-shadow: var(--shadow-card);
-	}
-
-	.eyebrow {
-		margin-bottom: 0.75rem;
-		color: var(--color-text-secondary);
-		font-size: 0.9rem;
-		font-weight: 500;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-	}
-
-	@media (max-width: 720px) {
-		.intro-card {
-			padding: 1.25rem;
-		}
-	}
-</style>
