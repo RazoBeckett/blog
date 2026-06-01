@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <header class="sticky top-0 z-[100] border-b border-border bg-[#fffdf7]/90 backdrop-blur-sm transition-colors duration-300 [[data-theme=dark]_&]:bg-[#1a1a1c]/90">
 	<nav class="mx-auto flex max-w-[900px] items-center justify-between gap-6 px-6 py-5 max-[720px]:px-5 max-[720px]:py-4">
-		<a href="/" class="relative z-[102] flex items-center gap-2 text-xl font-bold tracking-[-0.02em] text-text-primary no-underline transition-colors duration-150">
+		<a href="/" class="relative z-[102] flex items-center gap-2 text-[20px] font-bold leading-[1.6] tracking-[-0.02em] text-text-primary no-underline transition-colors duration-150">
 			{SITE_TITLE}
 		</a>
 		
@@ -28,9 +28,9 @@ import ThemeToggle from './ThemeToggle.astro';
 	
 	<div class="fixed inset-0 z-[101] h-screen w-screen bg-[#fffdf7] opacity-0 invisible transition-all duration-300 min-[721px]:hidden [[data-theme=dark]_&]:bg-[#1a1a1c]" id="mobile-menu-overlay">
 		<div class="flex h-full flex-col items-center justify-center gap-6 p-8">
-			<a href="/" class="px-4 py-2 text-[1.75rem] font-semibold text-text-primary no-underline transition-colors duration-200 hover:text-accent">Home</a>
-			<a href="/blog" class="px-4 py-2 text-[1.75rem] font-semibold text-text-primary no-underline transition-colors duration-200 hover:text-accent">Blog</a>
-			<a href="/about" class="px-4 py-2 text-[1.75rem] font-semibold text-text-primary no-underline transition-colors duration-200 hover:text-accent">About</a>
+			<a href="/" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">Home</a>
+			<a href="/blog" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">Blog</a>
+			<a href="/about" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">About</a>
 			<div class="mt-4">
 				<ThemeToggle />
 			</div>

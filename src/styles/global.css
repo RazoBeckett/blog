@@ -8,6 +8,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/rubik-350-latin.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-bg: var(--site-color-bg);
   --color-bg-secondary: var(--site-color-bg-secondary);
@@ -85,7 +93,7 @@
   }
 
   body {
-    @apply m-0 flex min-h-screen flex-col bg-bg p-0 font-display text-lg leading-[1.6] text-text-primary transition-colors duration-300 max-[720px]:text-base;
+    @apply m-0 flex min-h-screen flex-col bg-bg p-0 font-display text-[18px] leading-[1.6] text-text-primary transition-colors duration-300 max-[720px]:text-[16px];
   }
 
   main {
@@ -98,23 +106,23 @@
   h4,
   h5,
   h6 {
-    @apply mb-4 text-text-primary font-bold leading-tight tracking-[-0.03em];
+    @apply mb-4 text-text-primary font-bold leading-[1.2] tracking-[-0.03em];
   }
 
   h1 {
-    @apply text-[3.5rem] leading-[1.1] tracking-[-0.04em] max-[720px]:text-[2.5rem];
+    @apply text-[56px] leading-[1.1] tracking-[-0.04em] max-[720px]:text-[40px];
   }
 
   h2 {
-    @apply text-4xl max-[720px]:text-[1.75rem];
+    @apply text-[36px] max-[720px]:text-[28px];
   }
 
   h3 {
-    @apply text-[1.75rem];
+    @apply text-[28px];
   }
 
   h4 {
-    @apply text-xl;
+    @apply text-[20px];
   }
 
   p {
@@ -153,11 +161,11 @@
 
   pre > code {
     all: unset;
-    @apply font-mono text-[0.9rem] leading-[1.6] text-text-primary;
+    @apply font-mono text-[14.4px] leading-[1.6] text-text-primary;
   }
 
   blockquote {
-    @apply my-8 rounded-r-md border-l-4 border-accent bg-bg-secondary p-6 text-xl italic text-text-primary;
+    @apply my-8 rounded-r-md border-l-4 border-accent bg-bg-secondary p-6 text-[19.2px] italic text-text-primary;
   }
 
   blockquote p:last-child {
@@ -170,7 +178,7 @@
 }
 
 @utility btn {
-  @apply inline-flex cursor-pointer items-center justify-center rounded-pill border border-transparent px-6 py-3 text-base font-bold no-underline transition-all duration-150;
+  @apply inline-flex cursor-pointer items-center justify-center rounded-pill border border-transparent px-6 py-3 text-[16px] font-bold leading-[1.6] no-underline transition-all duration-150;
 }
 
 @utility btn-primary {
@@ -182,7 +190,7 @@
 }
 
 @utility prose-content {
-  @apply mx-auto w-full max-w-[750px] font-prose text-lg font-[350] leading-[30px] max-[720px]:text-[1.0625rem];
+  @apply mx-auto w-full max-w-[750px] font-prose text-[18px] font-[350] leading-[30px] max-[720px]:text-[17px];
 
   & :where(p) {
     @apply mb-8;
@@ -193,11 +201,11 @@
   }
 
   & :where(h2) {
-    @apply mt-14 mb-6 text-3xl font-light;
+    @apply mt-14 mb-6 text-[32px] font-light;
   }
 
   & :where(h3) {
-    @apply mt-12 mb-4 text-2xl font-light;
+    @apply mt-12 mb-4 text-[24px] font-light;
   }
 
   & :where(ul),

@@ -21,8 +21,8 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section class="mx-auto max-w-[600px] px-0 pt-8 pb-16 text-center">
-				<h1 class="mb-4 text-[3.5rem] tracking-[-0.04em] max-[720px]:text-[2.5rem]">The Blog</h1>
-				<p class="text-xl text-text-secondary">Reflections on design, code, and creativity.</p>
+				<h1 class="mb-4 text-[56px] tracking-[-0.04em] max-[720px]:text-[40px]">The Blog</h1>
+				<p class="text-[20px] leading-[1.6] text-text-secondary">Reflections on design, code, and creativity.</p>
 			</section>
 
 			<section>
@@ -42,12 +42,12 @@ const posts = (await getCollection('blog')).sort(
 									)}
 								</div>
 								<div class="flex grow flex-col">
-									<div class="mb-3 text-[0.8125rem] font-medium uppercase tracking-[0.05em] text-text-tertiary">
+									<div class="mb-3 text-[13px] font-medium uppercase tracking-[0.05em] text-text-tertiary">
 										<FormattedDate date={post.data.pubDate} />
 									</div>
-									<h2 class="mb-4 text-[1.75rem] leading-tight text-text-primary transition-colors duration-150 group-hover:text-accent">{post.data.title}</h2>
+									<h2 class="mb-4 text-[28px] leading-[1.2] text-text-primary transition-colors duration-150 group-hover:text-accent">{post.data.title}</h2>
 									{post.data.description && (
-										<p class="m-0 line-clamp-3 text-[1.0625rem] leading-[1.6] text-text-secondary">{post.data.description}</p>
+										<p class="m-0 line-clamp-3 text-[17px] leading-[1.6] text-text-secondary">{post.data.description}</p>
 									)}
 								</div>
 							</a>
