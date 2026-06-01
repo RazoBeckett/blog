@@ -4,54 +4,73 @@ import Layout from '../layouts/BlogPost.astro';
 
 <Layout
 	title="About Me"
-	description="Linux enthusiast, homelab builder, and open-source advocate."
+	description="Builder, Linux Enthusiast, Lifelong Learner."
 	pubDate={new Date('2025-01-01')}
 >
-	<h2>Hey, I'm Razo Beckett</h2>
-	
-	<p>
-		Welcome to my little corner of the web! I'm a technologist who loves Linux, open-source, 
-		automation, DevOps, and building tools that simply work. Whether it's scripting my way 
-		through a problem or crafting something useful with Go or Python, I love creating things 
-		that make life a little easier—and a lot more interesting.
-	</p>
+	<section class="intro-card">
+		<p class="eyebrow">Welcome to my little corner of the web!</p>
+		<h2>Hey, I'm Razo Beckett</h2>
+		<p>
+			I'm a curious builder who enjoys creating software, exploring Linux, and learning how
+			things work under the hood. I spend most of my time working on personal projects,
+			experimenting with new tools, and sharing thoughts on technology, development,
+			productivity, and the lessons I pick up along the way.
+		</p>
+		<p>
+			This blog serves as my digital notebook, a place to document projects, ideas,
+			discoveries, and occasional opinions on the tools and technologies I use.
+		</p>
+	</section>
 
-	<h3>What I Do</h3>
-	
-	<p>I spend most of my time tinkering with:</p>
-	
-	<ul>
-		<li>Linux systems (Arch is close to heart)</li>
-		<li>Automation using Bash, Ansible, and Home-Lab setups</li>
-		<li>Learning by building – from password managers to deployment pipelines</li>
-		<li>Beautifying terminal apps and GitHub READMEs (because aesthetics matter too)</li>
-		<li>Sharing my learnings, rants, and discoveries right here on this blog</li>
-	</ul>
+	<section>
+		<h3>What I Do</h3>
+		<p>
+			I build software, create command-line tools, explore AI-assisted development, and
+			experiment with new technologies. I'm particularly interested in Linux, open source
+			software, automation, privacy, self-hosting, and developer tools. When I'm not
+			building something, I'm usually learning, tinkering, or writing about what I've
+			discovered.
+		</p>
+	</section>
 
-	<h3>Who I Am</h3>
-	
-	<p>
-		My real name is Mayur Raut, better known as Razo Beckett online. This blog is where I get real. 
-		Expect honest takes, behind-the-scenes breakdowns of projects I build, and maybe even the 
-		occasional rant about tech that's trying too hard.
-	</p>
-
-	<p>
-		You can explore more about me and my projects at: <a href="https://link.razobeckett.xyz/pfo?utm_source=blog" target="_blank" rel="noopener noreferrer">mayurraut.dev</a>
-	</p>
-
-	<h3>Let's Connect</h3>
-	
-	<p>
-		This blog isn't just a broadcast—it's a conversation. Feel free to reach out, share thoughts, 
-		suggest ideas, or just say hi.
-	</p>
-
-	<p>
-		<a href="https://link.razobeckett.xyz/gh?utm_source=blog" target="_blank" rel="noopener noreferrer">GitHub</a> · 
-		<a href="https://link.razobeckett.xyz/lnkd?utm_source=blog" target="_blank" rel="noopener noreferrer">LinkedIn</a> · 
-		<a href="https://link.razobeckett.xyz/x?utm_source=blog" target="_blank" rel="noopener noreferrer">Twitter</a>
-	</p>
+	<section>
+		<h3>Let's Connect</h3>
+		<p>
+			If something here sparks an idea, feel free to reach out, share a thought, or just
+			say hi.
+		</p>
+		<p>
+			<a href="https://link.razobeckett.xyz/gh?utm_source=blog" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+			<a href="https://link.razobeckett.xyz/lnkd?utm_source=blog" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+			<a href="https://link.razobeckett.xyz/x?utm_source=blog" target="_blank" rel="noopener noreferrer">Twitter</a> ·
+			<a href="https://link.razobeckett.xyz/pfo?utm_source=blog" target="_blank" rel="noopener noreferrer">Portfolio</a>
+		</p>
+	</section>
 
 	<p>Thanks for stopping by. I'm glad you're here.</p>
 </Layout>
+
+<style>
+	.intro-card {
+		padding: 2rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		background: var(--color-bg-secondary);
+		box-shadow: var(--shadow-card);
+	}
+
+	.eyebrow {
+		margin-bottom: 0.75rem;
+		color: var(--color-text-secondary);
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	@media (max-width: 720px) {
+		.intro-card {
+			padding: 1.25rem;
+		}
+	}
+</style>
