@@ -1,7 +1,7 @@
 ---
 title: 'The Narrative is Broken'
 description: "I think AI is overhyped in the same way cricket is overhyped in India."
-heroImage: '../../assets/blog/the-narrative-is-broken/cover.webp'
+heroImage: '../../assets/writing/the-narrative-is-broken/cover.webp'
 pubDate: 2026-06-16
 ---
 

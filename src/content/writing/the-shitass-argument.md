@@ -1,7 +1,7 @@
 ---
 title: 'The Shitass Argument'
 description: "A raw take on tech egos"
-heroImage: '../../assets/blog/the-shitass-argument/cover.jpg'
+heroImage: '../../assets/writing/the-shitass-argument/cover.jpg'
 pubDate: 2026-03-21
 ---
 

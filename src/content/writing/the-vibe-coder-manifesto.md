@@ -2,7 +2,7 @@
 title: 'The Vibe Coder Manifesto'
 description: "Coding by hand is officially a bottleneck. We are diving into the reality of AI agents, why the VS Code harness is mid, and how OpenCode is changing the game for developers who just want to ship."
 pubDate: 2026-02-08
-heroImage: '../../assets/blog/the-vibe-coder-manifesto/cover.png'
+heroImage: '../../assets/writing/the-vibe-coder-manifesto/cover.png'
 ---
 
 <div align=center>I AM A VIBE CODER. I LOVE VIBE CODING.</div>
