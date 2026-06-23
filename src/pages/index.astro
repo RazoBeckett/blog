@@ -6,7 +6,7 @@ import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
-const recentPosts = (await getCollection('writing'))
+const recentPosts = (await getCollection('posts'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
 ---
@@ -26,7 +26,7 @@ const recentPosts = (await getCollection('writing'))
 						A thoughtful collection of ideas and experiments. Exploring the intersection of design, technology, and storytelling.
 					</p>
 					<div class="flex flex-wrap gap-4">
-						<a href="/writing" class="btn btn-primary focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg focus:outline-none">Read the Blog</a>
+						<a href="/posts" class="btn btn-primary focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg focus:outline-none">Read the Blog</a>
 						<a href="https://link.razobeckett.xyz/pfo?utm_source=blog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg focus:outline-none">Portfolio</a>
 						<a href="/about" class="btn btn-secondary focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg focus:outline-none">About Me</a>
 					</div>
@@ -41,7 +41,7 @@ const recentPosts = (await getCollection('writing'))
 				
 				<div class="flex flex-col">
 					{recentPosts.map((post, index) => (
-						<a href={`/writing/${post.id}/`} class="group flex items-center justify-between gap-8 border-t border-border py-8 no-underline transition-colors duration-150 last:border-b hover:-mx-6 hover:bg-bg-secondary hover:px-6 max-[720px]:py-6 max-[720px]:hover:-mx-5 max-[720px]:hover:px-5">
+						<a href={`/posts/${post.id}/`} class="group flex items-center justify-between gap-8 border-t border-border py-8 no-underline transition-colors duration-150 last:border-b hover:-mx-6 hover:bg-bg-secondary hover:px-6 max-[720px]:py-6 max-[720px]:hover:-mx-5 max-[720px]:hover:px-5">
 							<div class="flex flex-1 items-start gap-8 max-[720px]:gap-4">
 								<span class="min-w-8 pt-1 font-mono text-[14px] font-bold leading-[1.6] tracking-[-0.02em] text-text-tertiary max-[720px]:hidden">0{index + 1}</span>
 								<div class="flex-1">
@@ -64,7 +64,7 @@ const recentPosts = (await getCollection('writing'))
 					))}
 				</div>
 
-				<a href="/writing" class="group mt-10 inline-flex items-center gap-2 rounded-pill border border-border bg-bg-secondary px-6 py-3.5 text-[15px] font-semibold text-text-primary transition-all duration-150 hover:border-accent hover:bg-accent hover:text-text-inverted">
+				<a href="/posts" class="group mt-10 inline-flex items-center gap-2 rounded-pill border border-border bg-bg-secondary px-6 py-3.5 text-[15px] font-semibold text-text-primary transition-all duration-150 hover:border-accent hover:bg-accent hover:text-text-inverted">
 					<span>View all articles</span>
 					<svg class="transition-transform duration-150 group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<line x1="5" y1="12" x2="19" y2="12"></line>

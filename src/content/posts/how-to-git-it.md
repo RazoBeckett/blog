@@ -2,7 +2,7 @@
 title: 'How to git it!'
 description: "Why I use Git, how it saved me once, and why you should care even if you're a solo dev."
 pubDate: 2025-07-27
-heroImage: '../../assets/writing/how-to-git-it/cover.png'
+heroImage: '../../assets/posts/how-to-git-it/cover.png'
 ---
 
 *Why I use Git, how it saved me once, and why you should care even if you're a solo dev.*

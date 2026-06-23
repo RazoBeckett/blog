@@ -19,7 +19,7 @@ import ThemeToggle from './ThemeToggle.astro';
 		<div class="flex items-center gap-6 max-[720px]:hidden" id="nav-right">
 			<div class="flex items-center gap-2">
 				<HeaderLink href="/">Home</HeaderLink>
-				<HeaderLink href="/writing">Blog</HeaderLink>
+				<HeaderLink href="/posts">Blog</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
 			</div>
 			<ThemeToggle />
@@ -29,7 +29,7 @@ import ThemeToggle from './ThemeToggle.astro';
 	<div class="fixed inset-0 z-[101] h-screen w-screen bg-[#fffdf7] opacity-0 invisible transition-all duration-300 min-[721px]:hidden [[data-theme=dark]_&]:bg-[#1a1a1c]" id="mobile-menu-overlay">
 		<div class="flex h-full flex-col items-center justify-center gap-6 p-8">
 			<a href="/" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">Home</a>
-			<a href="/writing" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">Blog</a>
+			<a href="/posts" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">Blog</a>
 			<a href="/about" class="px-4 py-2 text-[28px] font-semibold leading-[1.6] text-text-primary no-underline transition-colors duration-200 hover:text-accent">About</a>
 			<div class="mt-4">
 				<ThemeToggle />
