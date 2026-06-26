@@ -9,9 +9,9 @@
 }
 
 @font-face {
-  font-family: "Syne Mono";
-  src: url("/fonts/syne-mono-400-latin.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Source Serif 4";
+  src: url("/fonts/source-serif-4-vf-latin.woff2") format("woff2");
+  font-weight: 200 900;
   font-style: normal;
   font-display: swap;
 }
@@ -35,7 +35,7 @@
   --color-code-bg: var(--site-color-code-bg);
   --color-code-text: var(--site-color-code-text);
   --font-display: "TsangerJinKai02", Georgia, serif;
-  --font-prose: "Syne Mono", monospace;
+  --font-prose: "Source Serif 4", Georgia, serif;
   --font-mono: "SF Mono", "Fira Code", monospace;
   --shadow-card: 0 0 0 1px var(--site-color-border);
   --shadow-card-hover: 0 0 0 1px var(--site-color-accent);
