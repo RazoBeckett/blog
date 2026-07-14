@@ -236,6 +236,10 @@ html.pixelate-dissolve-transition::view-transition-group(root) {
   animation-timing-function: var(--expo-out);
 }
 
+html.pixelate-dissolve-transition :where(img) {
+  view-transition-name: none !important;
+}
+
 html.pixelate-dissolve-transition::view-transition-old(root) {
   animation: pixelate-out 0.6s steps(10) forwards;
   z-index: 2;
