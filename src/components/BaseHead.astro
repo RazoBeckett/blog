@@ -58,10 +58,21 @@ const pageTitle = title === SITE_TITLE ? `${SITE_TITLE} â€” Blog` : `${title} â€
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
 <script is:inline>
-	(function() {
-		const theme = localStorage.getItem('theme') || 
+	(function () {
+		const getTheme = () =>
+			localStorage.getItem('theme') ||
 			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-		document.documentElement.setAttribute('data-theme', theme);
+
+		document.documentElement.setAttribute('data-theme', getTheme());
+
+		document.addEventListener('astro:before-swap', (e) => {
+			e.newDocument.documentElement.setAttribute('data-theme', getTheme());
+			e.newDocument.documentElement.style.scrollBehavior = 'auto';
+		});
+
+		document.addEventListener('astro:after-swap', () => {
+			document.documentElement.style.scrollBehavior = '';
+		});
 	})();
 </script>
 
