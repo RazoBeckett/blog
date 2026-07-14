@@ -218,6 +218,13 @@
   }
 }
 
+/* Lift the sticky header's view-transition group above named image groups so a
+   card image scrolled under the navbar can't pop out over it during the page
+   cross-fade. Cleared during the theme transition via the rule above. */
+::view-transition-group(site-header) {
+  z-index: 9999;
+}
+
 /* Pixelate Dissolve Theme Transition */
 
 :root {
@@ -236,7 +243,7 @@ html.pixelate-dissolve-transition::view-transition-group(root) {
   animation-timing-function: var(--expo-out);
 }
 
-html.pixelate-dissolve-transition :where(img) {
+html.pixelate-dissolve-transition [data-astro-transition-scope] {
   view-transition-name: none !important;
 }
 
