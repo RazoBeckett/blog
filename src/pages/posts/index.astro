@@ -37,6 +37,7 @@ const posts = (await getCollection('posts')).sort(
 											height={360} 
 											src={post.data.heroImage} 
 											alt="" 
+											transition:name={`hero-${post.id}`}
 											class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
 										/>
 									)}

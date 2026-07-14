@@ -6,9 +6,9 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 
-type Props = CollectionEntry<'posts'>['data'];
+type Props = CollectionEntry<'posts'>['data'] & { id: string };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, id } = Astro.props;
 ---
 
 <!doctype html>
@@ -37,7 +37,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 				{heroImage && (
 					<div class="mx-[-3rem] mb-16 overflow-hidden rounded-lg shadow-card max-[720px]:mx-[-1.25rem] max-[720px]:mb-8 max-[720px]:rounded-none">
-						<Image width={960} height={480} src={heroImage} alt="" class="block h-auto w-full" />
+						<Image width={960} height={480} src={heroImage} alt="" transition:name={`hero-${id}`} class="block h-auto w-full" />
 					</div>
 				)}
 
