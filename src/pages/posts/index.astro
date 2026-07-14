@@ -30,7 +30,7 @@ const posts = (await getCollection('posts')).sort(
 					{posts.map((post) => (
 						<li class="m-0">
 							<a href={`/posts/${post.id}/`} class="group flex h-full flex-col no-underline">
-								<div class="relative mb-6 aspect-[3/2] overflow-hidden rounded-md bg-bg-tertiary">
+								<div class="relative mb-6 aspect-[2/1] overflow-hidden rounded-md bg-bg-tertiary">
 									{post.data.heroImage && (
 										<Image 
 											width={720} 
