@@ -219,8 +219,15 @@
 }
 
 /* Lift the sticky header's view-transition group above named image groups so a
-   card image scrolled under the navbar can't pop out over it during the page
-   cross-fade. Cleared during the theme transition via the rule above. */
+   card image scrolled under the navbar can't pop out over it during a page
+   navigation.
+
+   This only applies to navigations. The theme toggle drops every scoped
+   `view-transition-name` (see the `.pixelate-dissolve-transition` rule further
+   down), which folds the header back into the root snapshot, so no
+   `site-header` group exists to stack in the first place. Astro compiles
+   `transition:name` into a `data-astro-transition-scope` attribute, which is
+   what that rule matches on. */
 ::view-transition-group(site-header) {
   z-index: 9999;
 }
