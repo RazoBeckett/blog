@@ -29,7 +29,7 @@ const posts = (await getCollection('posts')).sort(
 				<ul class="m-0 grid list-none grid-cols-2 gap-10 p-0 max-[720px]:grid-cols-1 max-[720px]:gap-12">
 					{posts.map((post) => (
 						<li class="m-0">
-							<a href={`/posts/${post.id}/`} class="group flex h-full flex-col no-underline">
+							<a href={`/posts/${post.id}/`} data-astro-prefetch="hover" class="group flex h-full flex-col no-underline">
 								<div class="relative mb-6 aspect-[2/1] overflow-hidden rounded-md bg-bg-tertiary">
 									{post.data.heroImage && (
 										<Image 
