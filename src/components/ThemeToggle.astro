@@ -39,6 +39,13 @@
       localStorage.setItem('theme', theme);
     };
 
+    // Starting a view transition skips any one already in flight, and a skipped
+    // transition resolves `finished` immediately. Tracking the in-flight handle
+    // keeps the dissolve class applied until the most recent one settles, so
+    // clicking the toggle again mid-dissolve can't strip the styling out from
+    // under a transition that is still animating.
+    let activeTransition: ViewTransition | null = null;
+
     toggles.forEach(toggle => {
       toggle.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme');
@@ -50,10 +57,21 @@
         const transition = document.startViewTransition(() => {
           setTheme(next);
         });
+        activeTransition = transition;
 
-        transition.finished.then(() => {
+        const settle = () => {
+          if (activeTransition !== transition) return;
+          activeTransition = null;
           html.classList.remove('pixelate-dissolve-transition');
-        });
+        };
+
+        transition.finished.then(settle, settle);
+
+        // A skipped transition also rejects `ready` and `updateCallbackDone`.
+        // Nothing consumes those, and an unobserved rejection surfaces as an
+        // uncaught AbortError, so swallow them here.
+        transition.ready.catch(() => {});
+        transition.updateCallbackDone.catch(() => {});
       });
     });
 
